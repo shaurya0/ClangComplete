@@ -1,3 +1,7 @@
 complete/*.o
 complete/*.so
 complete/*.dylib
+complete/*.dll
+complete/CMakeCache.txt
+complete/cmake_install.cmake
+complete/CMakeFiles

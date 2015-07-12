@@ -1,7 +1,7 @@
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at http://mozilla.org/MPL/2.0/.
-# 
+#
 # Copyright (c) 2013, Paul Fultz II
 
 from ctypes import cdll
@@ -17,6 +17,8 @@ current_path = os.path.dirname(os.path.abspath(__file__))
 suffix = 'so'
 if platform.system() == 'Darwin':
     suffix = 'dylib'
+elif platform.system() == 'Windows':
+    suffix = 'dll'
 complete = cdll.LoadLibrary('%s/libcomplete.%s' % (current_path, suffix))
 
 #
